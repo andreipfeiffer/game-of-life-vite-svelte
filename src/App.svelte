@@ -4,16 +4,14 @@
   import { store, play, updateNextPopulation } from "./lib/store";
   import Settings from "./lib/Settings.svelte";
   import Life from "./lib/Life.svelte";
+  import LifeCanvas from "./lib/LifeCanvas.svelte";
   import { LifetimeValues } from "./lib/constants";
-  // import LifeCanvas from "./LifeCanvas.svelte";
 
   $: timeoutId = 0;
   $: msDelay = LifetimeValues[$store.lifetime].value;
 
   play.subscribe((value) => {
     console.log({ value });
-
-    // onMount(() => {
 
     window.clearTimeout(timeoutId);
     window.cancelAnimationFrame(timeoutId);
@@ -41,8 +39,6 @@
         : window.clearTimeout(timeoutId);
     }
   });
-
-  // });
 </script>
 
 <div>
@@ -53,7 +49,7 @@
     {#if $store.renderer === "html"}
       <Life />
     {:else}
-      <!-- <LifeCanvas {population} {size} /> -->
+      <LifeCanvas />
     {/if}
   </div>
 </div>
