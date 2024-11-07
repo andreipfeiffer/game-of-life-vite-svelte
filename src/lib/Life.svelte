@@ -21,9 +21,11 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    box-shadow: 0 0 0 1px#00000022;
   }
   :global(.life.small-size) {
     border: 1px black solid;
+    box-shadow: none;
   }
 
   :global(.row) {
@@ -33,8 +35,7 @@
   :global(.cell) {
     display: inline-block;
     background-color: white;
-    border: 1px black solid;
-    margin: 1px;
+    box-shadow: inset 0 0 0 1px#00000022;
     padding: 0;
     width: var(--size);
     height: var(--size);
@@ -43,7 +44,7 @@
     background-color: black;
   }
   :global(.small-size .cell) {
-    border: 0;
+    box-shadow: none;
     margin: 0;
   }
 </style>

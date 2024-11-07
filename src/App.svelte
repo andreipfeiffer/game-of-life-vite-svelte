@@ -71,7 +71,7 @@
   }
 
   :global(html) {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   :global(input):not([type="range"]):not([type="checkbox"]),
@@ -87,15 +87,21 @@
     white-space: normal;
     background: none;
     appearance: none;
-
+    
     border-radius: 0;
     font-size: 1rem;
-    padding: 0.5rem 0.75rem;
+    height: 2.25em;
+    padding: 0 0.75rem;
     font-weight: bold;
-
+    
     box-sizing: content-box;
   }
-
+  
+  :global(button:active) {
+    background-color: black;
+    color: white;
+  }
+  
   :global(hr) {
     border: none;
     height: 1px;
@@ -105,12 +111,6 @@
 
   .playing {
     pointer-events: none;
-  }
-
-  :global(button).secondary {
-    font-weight: normal;
-    border-color: #666666;
-    color: #666666;
   }
 
   :global(h1) {

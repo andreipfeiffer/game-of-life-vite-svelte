@@ -55,15 +55,17 @@
     <option value="canvas">Canvas</option>
   </select>
 
-  Width:
+  <br />
+  <br />
+
+  Grid:
   <input
     type="number"
     bind:value={$store.width}
     on:input={(e) => ($store.width = e.target.valueAsNumber)}
     class="input"
   />
-
-  Height:
+  &times;
   <input
     type="number"
     bind:value={$store.height}
@@ -99,7 +101,7 @@
       type="range"
       bind:value={$store.lifetime}
       min={1}
-      max={5}
+      max={Object.keys(LifetimeValues).length}
       on:input={(e) => ($store.lifetime = e.target.value)}
       list="lifetime-options"
       style="margin: 0 1em;"
