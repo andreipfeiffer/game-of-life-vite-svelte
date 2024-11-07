@@ -7,6 +7,7 @@ const _ = false;
 
 export function getPresets(): Preset[] {
   return [
+    /*
     {
       id: "block",
       description: "Block (Still life)",
@@ -60,6 +61,7 @@ export function getPresets(): Preset[] {
         [_, _, _, _, _, _],
       ],
     },
+    */
     {
       id: "pulsar",
       description: "Pulsar (period 3 Oscillator)",
@@ -86,6 +88,7 @@ export function getPresets(): Preset[] {
         [...__(17)],
       ],
     },
+    /*
     {
       id: "penta-decathlon",
       description: "Penta-decathlon (period 15 Oscillator)",
@@ -160,6 +163,7 @@ export function getPresets(): Preset[] {
         [_, _, _, _, _, _, _, _, _, _, _, _],
       ],
     },
+    */
     {
       id: "HWSS",
       description: "Heavy-weight spaceship (HWSS)",
@@ -176,6 +180,7 @@ export function getPresets(): Preset[] {
         [_, _, _, _, _, _, _, _, _, _, _, _, _],
       ],
     },
+    /*
     {
       id: "diehard",
       description: "Die Hard (Methuselahs)",
@@ -202,19 +207,21 @@ export function getPresets(): Preset[] {
         [...__(100), O, O, _, _, O, O, O, _],
       ],
     },
+    */
     {
       id: "r_pentomino",
       description: "The R-pentomino (Methuselahs)",
-      width: 200,
-      height: 150,
-      size: 3,
+      width: 60,
+      height: 60,
+      size: 6,
       grid: [
-        ...Array(80).fill([false]),
-        [...__(100), _, O, O],
-        [...__(100), O, O, _],
-        [...__(100), _, O, _],
+        ...Array(30).fill([false]),
+        [...__(30), _, O, O],
+        [...__(30), O, O, _],
+        [...__(30), _, O, _],
       ],
     },
+    /*
     {
       id: "infinite1",
       description: "Infinite 1",
@@ -268,11 +275,12 @@ export function getPresets(): Preset[] {
         ],
       ],
     },
+    */
     {
       id: "gospelslidergun",
       description: "Gosper glider gun",
       width: 300,
-      height: 200,
+      height: 150,
       size: 3,
       grid: [
         ...Array(30).fill([false]),
